@@ -3,7 +3,7 @@ resource "aws_eip" "eip" {
   
   instance = "${aws_instance.web.id}"
   
-  tags {
+  tags =  {
     Name = "${var.project_name}-${var.environment}"
   }
 }
